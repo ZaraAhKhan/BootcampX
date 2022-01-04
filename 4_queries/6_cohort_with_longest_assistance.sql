@@ -4,4 +4,5 @@ FROM assistance_requests
 JOIN students ON students.id = student_id
 JOIN cohorts ON cohort_id = cohorts.id
 GROUP BY cohorts.name
-ORDER BY average_assistance_time;
+ORDER BY average_assistance_time desc
+LIMIT 1;
